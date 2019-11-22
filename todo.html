@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <style>
+        h1{
+            text-align: center;
+            color: cornsilk;
+            font-size: 50px;;
+        }
+        body{
+            background-color: lightslategrey;
+        }
+        #text-box{
+            
+        }
+        #id1{
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+        <input type="text" id="text-box" placeholder="Enter text">
+        <button type="button" id="btn">Add Item</button>
+
+     <div id="para">
+         <ul id="id1"></ul>
+     </div>
+
+     <script>
+            var e = document.getElementById('text-box')
+            var e1 = document.getElementById('btn')
+            e1.addEventListener('click',testclick)
+            function testclick()
+            {
+                var e2 = document.getElementById('para')
+                var e3 = document.getElementById('id1')
+                var li = document.createElement('li')
+                var btn = document.createElement('button')
+                btn.textContent = "Delete"
+                btn.setAttribute("class","democlass")
+                li.textContent = e.value;
+                e3.appendChild(li)
+                e3.appendChild(btn)
+            }
+    </script>
+
+</body>
+</html>
